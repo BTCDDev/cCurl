@@ -1,20 +1,19 @@
-*cCurl*:
-    A ternary hash function for IOTA, the cryptocurrency for the Internet of Things economy
+# cCurl:
 
-    [iotatoken.com](http://iotatoken.com/)
+A ternary hash function for IOTA, the cryptocurrency for the Internet of Things economy @ iotatoken.com
 
 
 2016 BTCDDev
 
 Original Code by Come-from-Beyond
 
-```To Build:```
+### To Build:
 
 `clang cCurl.c -Wall -O3`
 
 
 
-```To Use:```
+### To Use:
 
 Create a `struct Curl` variable and pass it by reference to `setup_Curl()`
 
@@ -25,15 +24,18 @@ Create a variable input int array of balanced ternary
 
 
 
-```To Test:```
+### To Test:
 
 Uncomment the end of the file, right before the `run_tests()` declaration. Make sure you compile CurlReference.java with
 `javac CurlReference.java`
 
 
-`note:`
+### note:
 
 You are responsible for all bounds checks, cCurl currently doesn't do much
+
+### Version:
+0.0.1
 
 
 Errors or comments, please email at:
