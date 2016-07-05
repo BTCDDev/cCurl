@@ -77,9 +77,9 @@ void squeeze(struct Curl *_c, int *output, const int offset)
     javac CurlReference.java
     uncomment from here on and run
 */
-/*
-int run_test(int);
 
+int run_test(int);
+/*
 int main()
 {
 
@@ -90,7 +90,7 @@ int main()
     return 0;
 }
 
-
+*/
 int run_test(int in)
 {
     if (in !=0 && in!=-1 && in != 1){
@@ -142,4 +142,4 @@ int run_test(int in)
 
     return retVal;
 }
-*/
+

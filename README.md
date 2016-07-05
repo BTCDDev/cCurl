@@ -7,11 +7,6 @@ A ternary hash function for IOTA, the cryptocurrency for the Internet of Things 
 
 Original Code by Come-from-Beyond
 
-### To Build:
-
-`clang cCurl.c -Wall -O3`
-
-
 
 ### To Use:
 
@@ -28,9 +23,15 @@ Create a variable input int array of balanced ternary
 ### To Test:
 
 Uncomment the end of the file, right before the `run_tests()` declaration.
+
+Compile with `clang cCurl.c -Wall -O3`
+
+
 Make sure you compile CurlReference.java with
 `javac CurlReference.java`
 
+
+For the speed test, compile with `clang cCurl.c speedtest.c -Wall -Ofast`. Run with `./a.out <num hashes>`
 
 ### note:
 
