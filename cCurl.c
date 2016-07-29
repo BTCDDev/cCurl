@@ -32,7 +32,7 @@ void setup_Curl(struct Curl *_c)
     }
 }
 
-void transform(struct Curl *_c)
+inline void transform(struct Curl *_c)
 {
     int i, r, j;
     for (r = 27; r-- > 0;) {
@@ -48,7 +48,7 @@ void transform(struct Curl *_c)
     }
 }
 
-void absorb(struct Curl *_c, int *input, int offset, int size)
+inline void absorb(struct Curl *_c, int *input, int offset, int size)
 {
     do {
         //            System.arraycopy(input, offset, state, 0, size < HASH_SIZE ? size : HASH_SIZE);
@@ -59,13 +59,13 @@ void absorb(struct Curl *_c, int *input, int offset, int size)
 }
 
 
-void reset(struct Curl *_c)
+inline void reset(struct Curl *_c)
 {
     memset(_c->state, 0, _c->STATE_SIZE*sizeof(int));
 }
 
 
-void squeeze(struct Curl *_c, int *output, const int offset)
+inline void squeeze(struct Curl *_c, int *output, const int offset)
 {
     memcpy(output+offset, _c->state, _c->HASH_SIZE*sizeof(int));
     transform(_c);
@@ -106,8 +106,8 @@ int run_test(int in)
         input[j] = in;
     }
     int output[256];
-    char final_output[512];
-    memset(final_output, 0 , 512);
+    char final_output[1024];
+    memset(final_output, 0 , 1024 * sizeof(char));
     for(j=0; j<256; j++){
         output[j] = 0;
     }
