@@ -39,11 +39,11 @@ inline void transform(struct Curl *_c)
         for(j=0; j<729; j++){
             _c->stateCopy[j] = _c->state[j];
         }
-        for (i = 0; i < _c->STATE_SIZE;) {
+        for (i = 0; i < _c->STATE_SIZE; i++) {
             _c->state[i] = (_c->T[  _c->stateCopy[_c->INDICES[i]] +
                                     (_c->stateCopy[_c->INDICES[i+1]] << 2) +
                                     5 ]);
-            i++;
+            
         }
     }
 }
